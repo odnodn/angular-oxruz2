@@ -1,0 +1,1446 @@
+{
+  "title": "Anamnesebogen Pneumologie und Kardiologie",
+  "description": "Liebe(r) Patient(in), wir möchten Sie freundlich um möglichst vollständige Beantwortung der unten aufgeführten Fragen bitten. Dies erlaubt uns schnell und umfassend auf Ihr aktuelles Anliegen einzugehen.",
+  "completedHtml": "<h3>Thank you for your feedback</h3>",
+  "completedHtmlOnCondition": [
+    {
+      "expression": "{nps_score} >= 9",
+      "html": "<h3>Thank you for your feedback</h3> <h4>We are glad that you love our product. Your ideas and suggestions will help us make it even better.</h4>"
+    },
+    {
+      "expression": "{nps_score} >= 6  and {nps_score} <= 8",
+      "html": "<h3>Thank you for your feedback</h3> <h4>We are glad that you shared your ideas with us. They will help us make our product better.</h4>"
+    }
+  ],
+  "pages": [
+    {
+      "name": "page1",
+      "elements": [
+        {
+          "type": "rating",
+          "name": "nps_score",
+          "title": "On a scale of zero to ten, how likely are you to recommend our product to a friend or colleague?",
+          "isRequired": true,
+          "rateCount": 11,
+          "rateMin": 0,
+          "rateMax": 10,
+          "minRateDescription": "(Most unlikely)",
+          "maxRateDescription": "(Most likely)"
+        },
+        {
+          "type": "checkbox",
+          "name": "promoter_features",
+          "visibleIf": "{nps_score} >= 9",
+          "title": "Which of the following features do you value the most?",
+          "description": "Please select no more than three features.",
+          "isRequired": true,
+          "validators": [
+            {
+              "type": "answercount",
+              "text": "Please select no more than three features.",
+              "maxCount": 3
+            }
+          ],
+          "choices": [
+            "Performance",
+            "Stability",
+            "User interface",
+            "Complete functionality",
+            "Learning materials (documentation, demos, code examples)",
+            "Quality support"
+          ],
+          "showOtherItem": true,
+          "otherText": "Other features:",
+          "colCount": 2
+        },
+        {
+          "type": "comment",
+          "name": "passive_experience",
+          "visibleIf": "{nps_score} >= 7  and {nps_score} <= 8",
+          "title": "What can we do to make your experience more satisfying?"
+        },
+        {
+          "type": "comment",
+          "name": "disappointing_experience",
+          "visibleIf": "{nps_score} <= 6",
+          "title": "Please let us know why you had such a disappointing experience with our product"
+        }
+      ],
+      "title": "Löschen"
+    },
+    {
+      "name": "page2",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "panel7",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "question13",
+              "title": "Vorstellung ...",
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Erstvorstellung"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Verlaufskontrolle DMP (COPD / Asthma)"
+                },
+                {
+                  "value": "Item 5",
+                  "text": "Veralufskontrolle Sonstiges"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Verschlechterung"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Zweitmeinung"
+                },
+                {
+                  "value": "Item 6",
+                  "text": "Befundbesprechung"
+                },
+                {
+                  "value": "Item 7",
+                  "text": "Nach Akut-Krankenhaus-Aufenthalt"
+                },
+                {
+                  "value": "Item 8",
+                  "text": "Attest"
+                }
+              ],
+              "colCount": 5
+            }
+          ]
+        }
+      ],
+      "title": "Vorstellungsgrund"
+    },
+    {
+      "name": "page3",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "question1",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "question58",
+              "title": "Symptome",
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Husten"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Auswurf"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Luftnot"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Bluthusten"
+                }
+              ],
+              "colCount": 5
+            },
+            {
+              "type": "panel",
+              "name": "question3",
+              "elements": [
+                {
+                  "type": "panel",
+                  "name": "panel1",
+                  "elements": [
+                    {
+                      "type": "boolean",
+                      "name": "question8",
+                      "title": "produktiver Husten"
+                    },
+                    {
+                      "type": "boolean",
+                      "name": "question7",
+                      "title": "trockener Husten"
+                    }
+                  ],
+                  "title": "Art des Hustens"
+                },
+                {
+                  "type": "panel",
+                  "name": "panel32",
+                  "elements": [
+                    {
+                      "type": "checkbox",
+                      "name": "question62",
+                      "title": "Hustenauftreten",
+                      "choices": [
+                        {
+                          "value": "Item 1",
+                          "text": "selten"
+                        },
+                        {
+                          "value": "Item 2",
+                          "text": "gelegentlich"
+                        },
+                        {
+                          "value": "Item 3",
+                          "text": "auf bestimmten Anlass (Rauch, Staub, Anstrengung)"
+                        },
+                        {
+                          "value": "Item 4",
+                          "text": "fast täglich"
+                        },
+                        {
+                          "value": "Item 5",
+                          "text": "täglich"
+                        }
+                      ],
+                      "colCount": 5
+                    }
+                  ],
+                  "title": "Auftreten des Hustens"
+                },
+                {
+                  "type": "panel",
+                  "name": "panel2",
+                  "elements": [
+                    {
+                      "type": "checkbox",
+                      "name": "question57",
+                      "title": "Seit wann besteht der Husten",
+                      "choices": [
+                        {
+                          "value": "Item 1",
+                          "text": "seit wenigen Tagen"
+                        },
+                        {
+                          "value": "Item 2",
+                          "text": "seit wenigen Wochen"
+                        },
+                        {
+                          "value": "Item 3",
+                          "text": "mehr als 2 Monate"
+                        }
+                      ],
+                      "colCount": 5
+                    }
+                  ],
+                  "title": "Dauer des Husten"
+                }
+              ],
+              "title": "Husten"
+            },
+            {
+              "type": "panel",
+              "name": "question4",
+              "elements": [
+                {
+                  "type": "panel",
+                  "name": "panel3",
+                  "elements": [
+                    {
+                      "type": "checkbox",
+                      "name": "question10",
+                      "title": "Sputummenge",
+                      "choices": [
+                        {
+                          "value": "Item 1",
+                          "text": "wenig"
+                        },
+                        {
+                          "value": "Item 2",
+                          "text": "viel"
+                        }
+                      ],
+                      "colCount": 2
+                    }
+                  ],
+                  "title": "Quantität"
+                },
+                {
+                  "type": "panel",
+                  "name": "panel6",
+                  "elements": [
+                    {
+                      "type": "checkbox",
+                      "name": "question12",
+                      "title": "Vorallem wann?",
+                      "choices": [
+                        {
+                          "value": "Item 1",
+                          "text": "morgens"
+                        },
+                        {
+                          "value": "Item 2",
+                          "text": "tagsüber"
+                        },
+                        {
+                          "value": "Item 3",
+                          "text": "nachts"
+                        },
+                        {
+                          "value": "Item 4",
+                          "text": "nach dem Essen"
+                        }
+                      ],
+                      "colCount": 4
+                    }
+                  ],
+                  "title": "wann?"
+                },
+                {
+                  "type": "panel",
+                  "name": "panel4",
+                  "elements": [
+                    {
+                      "type": "checkbox",
+                      "name": "question9",
+                      "title": "Sputumfarbe",
+                      "choices": [
+                        {
+                          "value": "Item 1",
+                          "text": "klar"
+                        },
+                        {
+                          "value": "Item 2",
+                          "text": "weislich"
+                        },
+                        {
+                          "value": "Item 3",
+                          "text": "gelblich"
+                        },
+                        {
+                          "value": "Item 4",
+                          "text": "bräunlich"
+                        },
+                        {
+                          "value": "Item 5",
+                          "text": "mit Blutbeimengungen"
+                        }
+                      ],
+                      "colCount": 4
+                    }
+                  ],
+                  "title": "Farbe"
+                },
+                {
+                  "type": "panel",
+                  "name": "panel5",
+                  "elements": [
+                    {
+                      "type": "checkbox",
+                      "name": "question11",
+                      "title": "seit wann tritt eine vermehrte Menge an Auswurf auf?",
+                      "choices": [
+                        {
+                          "value": "Item 1",
+                          "text": "seit wenigen Tagen"
+                        },
+                        {
+                          "value": "Item 2",
+                          "text": "seit wenigen Wochen"
+                        },
+                        {
+                          "value": "Item 3",
+                          "text": "seit wenigen Monaten"
+                        },
+                        {
+                          "value": "Item 4",
+                          "text": "seit Jahren"
+                        }
+                      ],
+                      "colCount": 4
+                    }
+                  ],
+                  "title": "Dauer"
+                }
+              ],
+              "title": "Auswurf"
+            },
+            {
+              "type": "panel",
+              "name": "question5",
+              "elements": [
+                {
+                  "type": "checkbox",
+                  "name": "question6",
+                  "title": "Luftnot",
+                  "choices": [
+                    {
+                      "value": "Item 1",
+                      "text": "in Ruhe"
+                    },
+                    {
+                      "value": "Item 2",
+                      "text": "unter Belastung"
+                    },
+                    {
+                      "value": "Item 3",
+                      "text": "in Ruhe + unter Belastung"
+                    }
+                  ],
+                  "colCount": 4
+                },
+                {
+                  "type": "panel",
+                  "name": "panel20",
+                  "elements": [
+                    {
+                      "type": "checkbox",
+                      "name": "question36",
+                      "title": "Wann",
+                      "choices": [
+                        {
+                          "value": "Item 1",
+                          "text": "Treppensteigen"
+                        },
+                        {
+                          "value": "Item 2",
+                          "text": "Treppensteigen mit Einkäufen"
+                        },
+                        {
+                          "value": "Item 3",
+                          "text": "Bergaufgehen"
+                        },
+                        {
+                          "value": "Item 4",
+                          "text": "auf ebener Erde"
+                        }
+                      ],
+                      "colCount": 5
+                    },
+                    {
+                      "type": "panel",
+                      "name": "panel21",
+                      "elements": [
+                        {
+                          "type": "checkbox",
+                          "name": "question37",
+                          "title": "Ich habe Belastungsluftnot ca.",
+                          "choices": [
+                            {
+                              "value": "Item 1",
+                              "text": "seit mehreren Tagen"
+                            },
+                            {
+                              "value": "Item 2",
+                              "text": "seit mehreren Wochen"
+                            },
+                            {
+                              "value": "Item 3",
+                              "text": "seit mehreren Monaten"
+                            },
+                            {
+                              "value": "Item 4",
+                              "text": "seit Jahren"
+                            }
+                          ],
+                          "colCount": 5
+                        }
+                      ],
+                      "title": "Seit wann?"
+                    },
+                    {
+                      "type": "panel",
+                      "name": "panel22",
+                      "elements": [
+                        {
+                          "type": "checkbox",
+                          "name": "question38",
+                          "title": "Kardiologische Abklärung erfolgt?",
+                          "choices": [
+                            {
+                              "value": "Item 1",
+                              "text": "nein, noch nicht."
+                            },
+                            {
+                              "value": "Item 4",
+                              "text": "Termin vereinbart"
+                            },
+                            {
+                              "value": "Item 2",
+                              "text": "ja, aber unauffällig"
+                            },
+                            {
+                              "value": "Item 3",
+                              "text": "ja, mit Auffälligkeiten"
+                            }
+                          ],
+                          "colCount": 5
+                        }
+                      ],
+                      "title": "Abklärung"
+                    }
+                  ],
+                  "title": "Belastungsluftnot"
+                }
+              ],
+              "title": "Luftnot"
+            }
+          ],
+          "title": "Pneumologisch"
+        },
+        {
+          "type": "paneldynamic",
+          "name": "question2",
+          "title": "Kardiologisch"
+        }
+      ],
+      "title": "Symptome",
+      "description": "Bitte beschreiben Sie ihre Symptome der unteren Atemwege, die zur Vorstellung führten."
+    },
+    {
+      "name": "page4",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "question26",
+          "title": "geimpft",
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "nie"
+            },
+            {
+              "value": "Item 2",
+              "text": "1x"
+            },
+            {
+              "value": "Item 3",
+              "text": "2x"
+            },
+            {
+              "value": "Item 4",
+              "text": "3x"
+            },
+            {
+              "value": "Item 5",
+              "text": "4x"
+            },
+            {
+              "value": "Item 6",
+              "text": "5x"
+            }
+          ],
+          "colCount": 5
+        },
+        {
+          "type": "checkbox",
+          "name": "question27",
+          "title": "erkrankt",
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "nie"
+            },
+            {
+              "value": "Item 2",
+              "text": "1x"
+            },
+            {
+              "value": "Item 3",
+              "text": "2x"
+            }
+          ],
+          "colCount": 3
+        },
+        {
+          "type": "panel",
+          "name": "panel14",
+          "elements": [
+            {
+              "type": "text",
+              "name": "question28",
+              "title": "zuletzt",
+              "inputType": "date"
+            },
+            {
+              "type": "text",
+              "name": "question29",
+              "title": "davor",
+              "inputType": "date"
+            },
+            {
+              "type": "checkbox",
+              "name": "question30",
+              "title": "Symptome (verbleibend)",
+              "choices": [
+                {
+                  "value": "Item 13",
+                  "text": "Keine"
+                },
+                {
+                  "value": "Item 1",
+                  "text": "Husten"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Ruheluftnot"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Belastungsluftnot"
+                },
+                {
+                  "value": "Item 5",
+                  "text": "Erschöpfung"
+                },
+                {
+                  "value": "Item 6",
+                  "text": "Leistungsverlust"
+                },
+                {
+                  "value": "Item 7",
+                  "text": "Konzentrationsstörungen"
+                },
+                {
+                  "value": "Item 8",
+                  "text": "Geschmacksstörungen"
+                },
+                {
+                  "value": "Item 9",
+                  "text": "Geruchsstörungen"
+                },
+                {
+                  "value": "Item 10",
+                  "text": "Herzrasen"
+                },
+                {
+                  "value": "Item 11",
+                  "text": "Herzstolpern"
+                },
+                {
+                  "value": "Item 12",
+                  "text": "Sonstige"
+                }
+              ],
+              "colCount": 5
+            },
+            {
+              "type": "panel",
+              "name": "panel23",
+              "elements": [
+                {
+                  "type": "checkbox",
+                  "name": "question39",
+                  "title": "Welche Fachrichtungen haben bereits Ihre Symptome abgeklärt?",
+                  "choices": [
+                    {
+                      "value": "Item 3",
+                      "text": "Lungenfacharzt"
+                    },
+                    {
+                      "value": "Item 4",
+                      "text": "Herzfacharzt"
+                    },
+                    {
+                      "value": "Item 5",
+                      "text": "Nervenfacharzt"
+                    },
+                    {
+                      "value": "Item 6",
+                      "text": "Hals-Nasen-Ohren-Facharzt"
+                    },
+                    {
+                      "value": "Item 7",
+                      "text": "Hausarzt"
+                    }
+                  ]
+                }
+              ],
+              "title": "Fachäztliche Abklärung"
+            }
+          ],
+          "title": "erkrankt"
+        }
+      ],
+      "title": "COVID"
+    },
+    {
+      "name": "page5",
+      "elements": [
+        {
+          "type": "boolean",
+          "name": "question14",
+          "title": "Allergien bekannt?"
+        },
+        {
+          "type": "panel",
+          "name": "panel8",
+          "elements": [
+            {
+              "type": "panel",
+              "name": "panel9",
+              "elements": [
+                {
+                  "type": "checkbox",
+                  "name": "question15",
+                  "title": "Luftallergene",
+                  "choices": [
+                    {
+                      "value": "Item 1",
+                      "text": "Baumpollen"
+                    },
+                    {
+                      "value": "Item 2",
+                      "text": "Gräserpollen"
+                    },
+                    {
+                      "value": "Item 3",
+                      "text": "Hausstaubmilben"
+                    },
+                    {
+                      "value": "Item 4",
+                      "text": "Schimmelpilze"
+                    },
+                    {
+                      "value": "Item 5",
+                      "text": "Tierhaare"
+                    },
+                    {
+                      "value": "Item 6",
+                      "text": "Sonstige"
+                    }
+                  ],
+                  "colCount": 5
+                },
+                {
+                  "type": "panel",
+                  "name": "panel10",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "name": "question16",
+                      "title": "Welche Medikamente (durch Komma getrennt)"
+                    }
+                  ],
+                  "title": "Medikamente"
+                },
+                {
+                  "type": "panel",
+                  "name": "panel11",
+                  "elements": [
+                    {
+                      "type": "text",
+                      "name": "question17",
+                      "title": "Welche Lebensmittel (durch Komma getrennt)"
+                    }
+                  ],
+                  "title": "Lebensmittel"
+                }
+              ],
+              "title": "Allergene"
+            }
+          ],
+          "title": "Allergien"
+        }
+      ],
+      "title": "Allergien"
+    },
+    {
+      "name": "page6",
+      "elements": [
+        {
+          "type": "radiogroup",
+          "name": "question19",
+          "title": "Status",
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Nieraucher"
+            },
+            {
+              "value": "Item 2",
+              "text": "Ex-Raucher"
+            },
+            {
+              "value": "Item 3",
+              "text": "Raucher"
+            }
+          ],
+          "colCount": 5
+        },
+        {
+          "type": "panel",
+          "name": "panel13",
+          "elements": [
+            {
+              "type": "text",
+              "name": "question25",
+              "title": "Seit ca. wieviel Jahren?",
+              "inputType": "number"
+            }
+          ],
+          "title": "Ex-Raucher"
+        },
+        {
+          "type": "panel",
+          "name": "panel12",
+          "elements": [
+            {
+              "type": "text",
+              "name": "question18",
+              "title": "Anzahl Zigaretten pro Tag",
+              "description": "(ca. 5/10/15/20/30)",
+              "inputType": "number"
+            },
+            {
+              "type": "text",
+              "name": "question20",
+              "title": "Über wieviele Jahre ?",
+              "description": "(5/10/20/30/40/50 Jahre)",
+              "inputType": "number"
+            },
+            {
+              "type": "text",
+              "name": "question21",
+              "title": "Mit welchem Lebensjahr ca. angefangen?",
+              "inputType": "number"
+            }
+          ],
+          "title": "Raucher"
+        }
+      ],
+      "title": "Rauchstatus"
+    },
+    {
+      "name": "page7",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "question22",
+          "title": "Welche",
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Pneumokokken"
+            },
+            {
+              "value": "Item 2",
+              "text": "Influenza"
+            },
+            {
+              "value": "Item 3",
+              "text": "Covid (SARS-CoV2)"
+            },
+            {
+              "value": "Item 4",
+              "text": "RSV"
+            }
+          ],
+          "colCount": 5
+        }
+      ],
+      "title": "Imfpungen"
+    },
+    {
+      "name": "page8",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "question24",
+          "title": "Auffälligkeiten:",
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Schnarchen"
+            },
+            {
+              "value": "Item 2",
+              "text": "Atemaussetzer"
+            },
+            {
+              "value": "Item 3",
+              "text": "kein erholsamer Schlaf"
+            },
+            {
+              "value": "Item 4",
+              "text": "vermehrte Tagesmüdigkeit"
+            },
+            {
+              "value": "Item 5",
+              "text": "Einschlafen in monotonen Situationen"
+            },
+            {
+              "value": "Item 6",
+              "text": "bekannte Schlafapnoe"
+            },
+            {
+              "value": "Item 7",
+              "text": "Schlafgerät vorhanden"
+            }
+          ],
+          "colCount": 5
+        },
+        {
+          "type": "boolean",
+          "name": "question23",
+          "title": "Schlafdiagnostik ambulant bereits durchgeführt?"
+        }
+      ],
+      "title": "Schlaf"
+    },
+    {
+      "name": "page9",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "panel15",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "question31",
+              "title": "Erkrankungen (pneumologisch)",
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Asthma"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "COPD"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Lungenembolie"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Lungenkrebs"
+                },
+                {
+                  "value": "Item 5",
+                  "text": "Lungenfibrose"
+                },
+                {
+                  "value": "Item 6",
+                  "text": "Zustand nach Lungen-OP"
+                },
+                {
+                  "value": "Item 7",
+                  "text": "Sonstige"
+                }
+              ],
+              "colCount": 5
+            }
+          ],
+          "title": "Pneumologisch"
+        },
+        {
+          "type": "panel",
+          "name": "panel16",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "question32",
+              "title": "Erkrankungen (kardiologisch)",
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Herzinsuffizienz"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Koronare Herzerkrankung (KHK)"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Vorhofflimmern"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Bluthochdruck"
+                },
+                {
+                  "value": "Item 5",
+                  "text": "Zustand nach Herzinfarkt"
+                }
+              ],
+              "colCount": 5
+            }
+          ],
+          "title": "Kardiologisch"
+        },
+        {
+          "type": "panel",
+          "name": "panel17",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "question33",
+              "title": "Erkrankungen (rheumatologisch)",
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "keine"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Rheumatoide Arthritis"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Systemsklerose"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Fibromyalgie"
+                },
+                {
+                  "value": "Item 5",
+                  "text": "Sarkoidose"
+                },
+                {
+                  "value": "Item 6",
+                  "text": "Sonstige"
+                }
+              ],
+              "colCount": 5
+            }
+          ],
+          "title": "Rheumatologisch"
+        },
+        {
+          "type": "panel",
+          "name": "panel18",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "question34",
+              "title": "Erkrankungen (endokrinologisch)",
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "Schilddrüsenunterfunktion"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "Schilddrüsenüberfunktion"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Schilddrüsenknoten"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Autoimmun-Schilddrüsenerkrankung"
+                }
+              ],
+              "colCount": 5
+            }
+          ],
+          "title": "Endokrinologisch"
+        },
+        {
+          "type": "panel",
+          "name": "panel19",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "question35",
+              "title": "Erkrankungen HNO)",
+              "choices": [
+                {
+                  "value": "Item 2",
+                  "text": "Nasenpolypen"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "Entzündung Nasennebenhöhlen"
+                },
+                {
+                  "value": "Item 4",
+                  "text": "Chronisches Nasenlaufen"
+                }
+              ],
+              "colCount": 5
+            }
+          ],
+          "title": "HNO"
+        }
+      ],
+      "title": "Vorerkrankungen"
+    },
+    {
+      "name": "page10",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "question40",
+          "title": "Sportliche Aktivitäten",
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "kein Sport"
+            },
+            {
+              "value": "Item 2",
+              "text": "Rehasport Herz"
+            },
+            {
+              "value": "Item 3",
+              "text": "Rehasport Lunge"
+            },
+            {
+              "value": "Item 4",
+              "text": "Lungensport"
+            },
+            {
+              "value": "Item 5",
+              "text": "Fitnessstudio Ausdauertraining"
+            },
+            {
+              "value": "Item 6",
+              "text": "Fitnessstudio Krafttraining"
+            },
+            {
+              "value": "Item 7",
+              "text": "Ausdauertraining zu Hause"
+            },
+            {
+              "value": "Item 8",
+              "text": "Krafttraining zu Hause"
+            }
+          ],
+          "colCount": 5
+        }
+      ],
+      "title": "Sport"
+    },
+    {
+      "name": "page11",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "question41",
+          "title": "Ich hatte bereits eine Reha-Maßnahme für die Lunge",
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "nie"
+            },
+            {
+              "value": "Item 2",
+              "text": "vor langem"
+            },
+            {
+              "value": "Item 3",
+              "text": "vor kurzem"
+            },
+            {
+              "value": "Item 4",
+              "text": "beantragt"
+            }
+          ],
+          "colCount": 5
+        }
+      ],
+      "title": "Reha"
+    },
+    {
+      "name": "page12",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "question44",
+          "title": "Hilfsmittel",
+          "choices": [
+            {
+              "value": "Item 1",
+              "text": "Inhalationsgerät"
+            },
+            {
+              "value": "Item 2",
+              "text": "Sekretlöser (Flutter, Cornet, GeloMUC)"
+            },
+            {
+              "value": "Item 3",
+              "text": "PEP-Device (BA-Tube)"
+            }
+          ],
+          "colCount": 5
+        }
+      ],
+      "title": "Hilfsmittel"
+    },
+    {
+      "name": "page13",
+      "title": "Vorkenntnisse"
+    },
+    {
+      "name": "page14",
+      "elements": [
+        {
+          "type": "multipletext",
+          "name": "question42",
+          "title": "Haben Sie spezielle Fragen an uns, können Sie uns diese hier mitteilen:",
+          "items": [
+            {
+              "name": "text1"
+            },
+            {
+              "name": "text2"
+            }
+          ]
+        }
+      ],
+      "title": "Spezielle Fragen an uns"
+    },
+    {
+      "name": "page15",
+      "elements": [
+        {
+          "type": "checkbox",
+          "name": "question43",
+          "title": "Ich nehme Medikamente ein",
+          "choices": [
+            {
+              "value": "Item 2",
+              "text": "nein"
+            },
+            {
+              "value": "Item 1",
+              "text": "ja"
+            },
+            {
+              "value": "Item 3",
+              "text": "nur bei Bedarf"
+            },
+            {
+              "value": "Item 4",
+              "text": "Herzmedikamente"
+            },
+            {
+              "value": "Item 5",
+              "text": "Lungenmedikamente"
+            },
+            {
+              "value": "Item 6",
+              "text": "Schilddrüsenmedikamente"
+            }
+          ],
+          "colCount": 5
+        },
+        {
+          "type": "panel",
+          "name": "panel26",
+          "elements": [
+            {
+              "type": "text",
+              "name": "question45",
+              "title": "Medikament 1"
+            },
+            {
+              "type": "text",
+              "name": "question46",
+              "title": "Medikament 2"
+            },
+            {
+              "type": "text",
+              "name": "question47",
+              "title": "Medikament 3"
+            }
+          ],
+          "title": "Lungenmedikamente"
+        },
+        {
+          "type": "panel",
+          "name": "panel29",
+          "elements": [
+            {
+              "type": "checkbox",
+              "name": "question59",
+              "title": "Sauerstoff vorhanden",
+              "choices": [
+                {
+                  "value": "Item 1",
+                  "text": "nein"
+                },
+                {
+                  "value": "Item 2",
+                  "text": "in Ruhe"
+                },
+                {
+                  "value": "Item 3",
+                  "text": "in Ruhe und unter Belastung"
+                }
+              ]
+            },
+            {
+              "type": "panel",
+              "name": "panel30",
+              "elements": [
+                {
+                  "type": "checkbox",
+                  "name": "question60",
+                  "title": "Sauerstoffversorgung mit",
+                  "choices": [
+                    {
+                      "value": "Item 1",
+                      "text": "Flüssigsauerstofftank zu Hause"
+                    },
+                    {
+                      "value": "Item 2",
+                      "text": "Flüssigsauerstoff mobile Quelle"
+                    },
+                    {
+                      "value": "Item 3",
+                      "text": "Konzentrator zu Hause"
+                    },
+                    {
+                      "value": "Item 4",
+                      "text": "Konzentrator mobil"
+                    },
+                    {
+                      "value": "Item 5",
+                      "text": "Sauerstoffflasche"
+                    },
+                    {
+                      "value": "Item 6",
+                      "text": "Rucksack"
+                    },
+                    {
+                      "value": "Item 7",
+                      "text": "Trolley"
+                    }
+                  ],
+                  "colCount": 5
+                },
+                {
+                  "type": "panel",
+                  "name": "panel31",
+                  "elements": [
+                    {
+                      "type": "checkbox",
+                      "name": "question61",
+                      "title": "Sauerstoffnutzung",
+                      "choices": [
+                        {
+                          "value": "Item 1",
+                          "text": "nur bei Belastung"
+                        },
+                        {
+                          "value": "Item 2",
+                          "text": "in Ruhe gelegentlich bei Bedarf"
+                        },
+                        {
+                          "value": "Item 3",
+                          "text": "grundsätzlich in Ruhe"
+                        },
+                        {
+                          "value": "Item 4",
+                          "text": "nur nachts"
+                        }
+                      ],
+                      "colCount": 5
+                    }
+                  ],
+                  "title": "Sauerstoffnutzung"
+                }
+              ],
+              "title": "Sauerstoffausstattung"
+            }
+          ],
+          "title": "Sauerstoff"
+        },
+        {
+          "type": "panel",
+          "name": "panel27",
+          "elements": [
+            {
+              "type": "text",
+              "name": "question48",
+              "title": "Medikament 1"
+            },
+            {
+              "type": "text",
+              "name": "question49",
+              "title": "Medikament 2"
+            },
+            {
+              "type": "text",
+              "name": "question50",
+              "title": "Medikament 3"
+            },
+            {
+              "type": "text",
+              "name": "question51",
+              "title": "Medikament 4"
+            },
+            {
+              "type": "text",
+              "name": "question52",
+              "title": "Medikament 5"
+            }
+          ],
+          "title": "Herzmedikamente"
+        },
+        {
+          "type": "panel",
+          "name": "panel28",
+          "elements": [
+            {
+              "type": "text",
+              "name": "question53",
+              "title": "Medikament 1"
+            }
+          ],
+          "title": "Schilddrüsenmedikamente"
+        }
+      ],
+      "title": "Medikamente"
+    },
+    {
+      "name": "page16",
+      "elements": [
+        {
+          "type": "panel",
+          "name": "panel24",
+          "elements": [
+            {
+              "type": "multipletext",
+              "name": "question54",
+              "title": "Telefonnummer/Email",
+              "items": [
+                {
+                  "name": "text1"
+                },
+                {
+                  "name": "text2"
+                }
+              ]
+            }
+          ],
+          "title": "Wie erreichen wir sie?"
+        },
+        {
+          "type": "panel",
+          "name": "panel25",
+          "elements": [
+            {
+              "type": "text",
+              "name": "question55",
+              "title": "Hausarztname"
+            },
+            {
+              "type": "text",
+              "name": "question56",
+              "title": "Hausarztort"
+            }
+          ],
+          "title": "Hausarzt"
+        }
+      ],
+      "title": "Kontakte/Erreichbarkeit"
+    }
+  ],
+  "showPageNumbers": true,
+  "showQuestionNumbers": "off"
+}
