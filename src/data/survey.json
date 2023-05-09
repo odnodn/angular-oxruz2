@@ -77,39 +77,39 @@
           "elements": [
             {
               "type": "checkbox",
-              "name": "question13",
+              "name": "Vorstellungsgrund",
               "title": "Vorstellung ...",
               "choices": [
                 {
-                  "value": "Item 1",
+                  "value": "Erstvorstellung",
                   "text": "Erstvorstellung"
                 },
                 {
-                  "value": "Item 2",
+                  "value": "VerlaufskontrolleDMP",
                   "text": "Verlaufskontrolle DMP (COPD / Asthma)"
                 },
                 {
-                  "value": "Item 5",
+                  "value": "VeralufskontrolleSonstiges",
                   "text": "Veralufskontrolle Sonstiges"
                 },
                 {
-                  "value": "Item 3",
+                  "value": "Verschlechterung",
                   "text": "Verschlechterung"
                 },
                 {
-                  "value": "Item 4",
+                  "value": "Zweitmeinung",
                   "text": "Zweitmeinung"
                 },
                 {
-                  "value": "Item 6",
+                  "value": "Befundbesprechung",
                   "text": "Befundbesprechung"
                 },
                 {
-                  "value": "Item 7",
+                  "value": "NachAkut-Krankenhaus-Aufenthalt",
                   "text": "Nach Akut-Krankenhaus-Aufenthalt"
                 },
                 {
-                  "value": "Item 8",
+                  "value": "Attest",
                   "text": "Attest"
                 }
               ],
@@ -129,23 +129,23 @@
           "elements": [
             {
               "type": "checkbox",
-              "name": "question58",
+              "name": "Symptome",
               "title": "Symptome",
               "choices": [
                 {
-                  "value": "Item 1",
+                  "value": "Husten",
                   "text": "Husten"
                 },
                 {
-                  "value": "Item 2",
+                  "value": "Auswurf",
                   "text": "Auswurf"
                 },
                 {
-                  "value": "Item 3",
+                  "value": "Luftnot",
                   "text": "Luftnot"
                 },
                 {
-                  "value": "Item 4",
+                  "value": "Bluthusten",
                   "text": "Bluthusten"
                 }
               ],
@@ -161,12 +161,12 @@
                   "elements": [
                     {
                       "type": "boolean",
-                      "name": "question8",
+                      "name": "produktiverHusten",
                       "title": "produktiver Husten"
                     },
                     {
                       "type": "boolean",
-                      "name": "question7",
+                      "name": "trockenerHusten",
                       "title": "trockener Husten"
                     }
                   ],
@@ -178,27 +178,27 @@
                   "elements": [
                     {
                       "type": "checkbox",
-                      "name": "question62",
+                      "name": "Hustenauftreten",
                       "title": "Hustenauftreten",
                       "choices": [
                         {
-                          "value": "Item 1",
+                          "value": "selten",
                           "text": "selten"
                         },
                         {
-                          "value": "Item 2",
+                          "value": "gelegentlich",
                           "text": "gelegentlich"
                         },
                         {
-                          "value": "Item 3",
+                          "value": "aufBestimmtenAnlass",
                           "text": "auf bestimmten Anlass (Rauch, Staub, Anstrengung)"
                         },
                         {
-                          "value": "Item 4",
+                          "value": "fasttäglich",
                           "text": "fast täglich"
                         },
                         {
-                          "value": "Item 5",
+                          "value": "täglich",
                           "text": "täglich"
                         }
                       ],
@@ -213,19 +213,19 @@
                   "elements": [
                     {
                       "type": "checkbox",
-                      "name": "question57",
+                      "name": "HustenSeitWann",
                       "title": "Seit wann besteht der Husten",
                       "choices": [
                         {
-                          "value": "Item 1",
+                          "value": "seit wenigen Tagen",
                           "text": "seit wenigen Tagen"
                         },
                         {
-                          "value": "Item 2",
+                          "value": "seit wenigen Wochen",
                           "text": "seit wenigen Wochen"
                         },
                         {
-                          "value": "Item 3",
+                          "value": "mehr als 2 Monate",
                           "text": "mehr als 2 Monate"
                         }
                       ],
@@ -247,15 +247,15 @@
                   "elements": [
                     {
                       "type": "checkbox",
-                      "name": "question10",
+                      "name": "Sputummenge",
                       "title": "Sputummenge",
                       "choices": [
                         {
-                          "value": "Item 1",
+                          "value": "wenig",
                           "text": "wenig"
                         },
                         {
-                          "value": "Item 2",
+                          "value": "viel",
                           "text": "viel"
                         }
                       ],
@@ -270,23 +270,23 @@
                   "elements": [
                     {
                       "type": "checkbox",
-                      "name": "question12",
+                      "name": "wann",
                       "title": "Vorallem wann?",
                       "choices": [
                         {
-                          "value": "Item 1",
+                          "value": "morgens",
                           "text": "morgens"
                         },
                         {
-                          "value": "Item 2",
+                          "value": "tagsüber",
                           "text": "tagsüber"
                         },
                         {
-                          "value": "Item 3",
+                          "value": "nachts",
                           "text": "nachts"
                         },
                         {
-                          "value": "Item 4",
+                          "value": "nach dem Esse",
                           "text": "nach dem Essen"
                         }
                       ],
@@ -301,27 +301,27 @@
                   "elements": [
                     {
                       "type": "checkbox",
-                      "name": "question9",
+                      "name": "Sputumfarbe",
                       "title": "Sputumfarbe",
                       "choices": [
                         {
-                          "value": "Item 1",
+                          "value": "klar",
                           "text": "klar"
                         },
                         {
-                          "value": "Item 2",
+                          "value": "weislich",
                           "text": "weislich"
                         },
                         {
-                          "value": "Item 3",
+                          "value": "gelblich",
                           "text": "gelblich"
                         },
                         {
-                          "value": "Item 4",
+                          "value": "bräunlich",
                           "text": "bräunlich"
                         },
                         {
-                          "value": "Item 5",
+                          "value": "Blutbeimengungen",
                           "text": "mit Blutbeimengungen"
                         }
                       ],
@@ -336,23 +336,23 @@
                   "elements": [
                     {
                       "type": "checkbox",
-                      "name": "question11",
+                      "name": "seitWann",
                       "title": "seit wann tritt eine vermehrte Menge an Auswurf auf?",
                       "choices": [
                         {
-                          "value": "Item 1",
+                          "value": "seit wenigen Tagen",
                           "text": "seit wenigen Tagen"
                         },
                         {
-                          "value": "Item 2",
+                          "value": "seit wenigen Wochen",
                           "text": "seit wenigen Wochen"
                         },
                         {
-                          "value": "Item 3",
+                          "value": "seit wenigen Monaten",
                           "text": "seit wenigen Monaten"
                         },
                         {
-                          "value": "Item 4",
+                          "value": "seit Jahren",
                           "text": "seit Jahren"
                         }
                       ],
@@ -370,15 +370,15 @@
               "elements": [
                 {
                   "type": "checkbox",
-                  "name": "question6",
+                  "name": "Luftnot",
                   "title": "Luftnot",
                   "choices": [
                     {
-                      "value": "Item 1",
+                      "value": "in Ruhe",
                       "text": "in Ruhe"
                     },
                     {
-                      "value": "Item 2",
+                      "value": "unter Belastung",
                       "text": "unter Belastung"
                     },
                     {
@@ -394,23 +394,23 @@
                   "elements": [
                     {
                       "type": "checkbox",
-                      "name": "question36",
+                      "name": "waqnn",
                       "title": "Wann",
                       "choices": [
                         {
-                          "value": "Item 1",
+                          "value": "Treppensteigen",
                           "text": "Treppensteigen"
                         },
                         {
-                          "value": "Item 2",
+                          "value": "Treppensteigen mit Einkäufen",
                           "text": "Treppensteigen mit Einkäufen"
                         },
                         {
-                          "value": "Item 3",
+                          "value": "Bergaufgehen",
                           "text": "Bergaufgehen"
                         },
                         {
-                          "value": "Item 4",
+                          "value": "auf ebener Erde",
                           "text": "auf ebener Erde"
                         }
                       ],
@@ -422,23 +422,23 @@
                       "elements": [
                         {
                           "type": "checkbox",
-                          "name": "question37",
+                          "name": "seitWann",
                           "title": "Ich habe Belastungsluftnot ca.",
                           "choices": [
                             {
-                              "value": "Item 1",
+                              "value": "seit mehreren Tagen",
                               "text": "seit mehreren Tagen"
                             },
                             {
-                              "value": "Item 2",
+                              "value": "seit mehreren Wochen",
                               "text": "seit mehreren Wochen"
                             },
                             {
-                              "value": "Item 3",
+                              "value": "seit mehreren Monaten",
                               "text": "seit mehreren Monaten"
                             },
                             {
-                              "value": "Item 4",
+                              "value": "seit Jahren",
                               "text": "seit Jahren"
                             }
                           ],
@@ -501,31 +501,31 @@
       "elements": [
         {
           "type": "checkbox",
-          "name": "question26",
+          "name": "geimpft",
           "title": "geimpft",
           "choices": [
             {
-              "value": "Item 1",
+              "value": "nie",
               "text": "nie"
             },
             {
-              "value": "Item 2",
+              "value": "1x",
               "text": "1x"
             },
             {
-              "value": "Item 3",
+              "value": "2x",
               "text": "2x"
             },
             {
-              "value": "Item 4",
+              "value": "3x",
               "text": "3x"
             },
             {
-              "value": "Item 5",
+              "value": "4x",
               "text": "4x"
             },
             {
-              "value": "Item 6",
+              "value": "5x",
               "text": "5x"
             }
           ],
@@ -533,19 +533,19 @@
         },
         {
           "type": "checkbox",
-          "name": "question27",
+          "name": "erkrankt",
           "title": "erkrankt",
           "choices": [
             {
-              "value": "Item 1",
+              "value": "nie",
               "text": "nie"
             },
             {
-              "value": "Item 2",
+              "value": "1x",
               "text": "1x"
             },
             {
-              "value": "Item 3",
+              "value": "2x",
               "text": "2x"
             }
           ],

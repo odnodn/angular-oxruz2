@@ -1,0 +1,41 @@
+{
+  "nps_score": 0,
+  "Vorstellungsgrund": [
+    "Erstvorstellung"
+  ],
+  "Symptome": [
+    "Husten",
+    "Auswurf",
+    "Luftnot"
+  ],
+  "produktiverHusten": true,
+  "trockenerHusten": false,
+  "Hustenauftreten": [
+    "selten"
+  ],
+  "HustenSeitWann": [
+    "seit wenigen Tagen"
+  ],
+  "Sputummenge": [
+    "wenig"
+  ],
+  "wann": [
+    "morgens",
+    "nachts"
+  ],
+  "Sputumfarbe": [
+    "klar"
+  ],
+  "seitWann": [
+    "seit wenigen Tagen",
+    "seit mehreren Tagen"
+  ],
+  "Luftnot": [
+    "in Ruhe",
+    "unter Belastung"
+  ],
+  "waqnn": [
+    "Treppensteigen",
+    "Treppensteigen mit Einkäufen"
+  ]
+}
